@@ -5,10 +5,6 @@ def defenition(x, y, z):
         return True
     else:
         return False
-
-pred_x = bool
-pred_y = bool
-pred_z = bool
 print('Утверждение к проверке:  ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z')
 print('X   Y   Z - result')
 string_input = "1000"

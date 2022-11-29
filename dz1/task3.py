@@ -10,7 +10,16 @@ x = int(input("Введите координату Х: "))
 y = int(input("Введите координату Y: "))
 area = 0
 print("Точка находится")
-if x != 0 and y != 0:
+if x == 0 or y == 0:
+    if x==0 and y==0:
+        print("В точке '0'")
+    else:
+        if x == 0:
+           print('На оси Y')
+        if y == 0:
+          print('На оси X')
+
+else:
     if x < 0:
         if y > 0:
             print('В четверти 2. x∈(-∞, 0) u y∈(0,∞)')
@@ -21,10 +30,3 @@ if x != 0 and y != 0:
             print('В четверти 1. x∈(0, ∞) u y∈(0,∞)')
         else:
             print('В четверти 4. x∈(0, ∞) u y∈(-∞, 0)')
-if x == 0 and y == 0:
-    print("В точке '0'")
-else:
-    if x == 0:
-        print('На оси Y')
-    if y == 0:
-        print('На оси X')
