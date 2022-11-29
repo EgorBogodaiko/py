@@ -2,6 +2,7 @@
 # Пример:
 # 67.82 -> 23
 # (-0.56) -> 11
+
 def is_float(string):
     try:
         float(string)
