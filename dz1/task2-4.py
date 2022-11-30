@@ -8,7 +8,6 @@
 # Определите номер этого человека и количество монет, которые оказались у него в конце игры.
 
 players_qty = int(input("Количество человек в круге: "))
-counter_def_input = int(input("Считалка считает до: "))
 players_list = []
 cash_list = []
 i = 1
@@ -22,15 +21,15 @@ print(players_list)
 print(cash_list)
 
 while players_qty > 1:
-    
+    counter_def_input = int(input("Считалка считает до: "))
     counter_def = (counter_def_input % players_qty)
     if counter_def ==0: counter_def=players_qty
     print('считалка ',counter_def)
     counter_var=0
     while counter_var < len(players_list):
-        if counter_var < counter_def:
+        if counter_var <= counter_def:
             cash_list[counter_var] += 1
-        elif counter_var >= counter_def:
+        elif counter_var > counter_def:
             cash_list[counter_var] += 2
         if counter_var == counter_def-1:
             if counter_def==players_qty:
@@ -50,4 +49,4 @@ while players_qty > 1:
     print(players_list)
     print(cash_list)
 print('Выиграл игрок №',players_list)
-print('Количество его монет равно ', cash_list)
+print('Количество его монет равно',cash_list)

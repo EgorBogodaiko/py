@@ -15,9 +15,7 @@ sumdigits = 0
 if is_float(realnumber) == False:
     print('Введено не вещественное число')
 else:
-    for i in range(len(realnumber)):
-        if realnumber[i] == '-' or realnumber[i] == '.' or realnumber[i] == '0':
-            i += 1
-        else:
-            sumdigits += int(realnumber[i])
+    for num in realnumber:
+        if num.isdigit():
+            sumdigits += int(num)
     print('Сумма цифр в числе: ', sumdigits)
